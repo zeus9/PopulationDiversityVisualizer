@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div id="tooltip"></div>
+  <script>
+    function tooltipHtml(n, d) { /* function to create html content string in tooltip div. */
+      return "<h4>" + n + " " + d + "</h4>";
+    }
+  </script>
+  <h3>Population Diversity Geo Data Visualizer</h3>
+  <div class="explanation">
+    <p>
+      This is a Geo Visualization of Diversity in the US. The choropleth map of the US represents the diversityIndex
+      which is a measure of how diverse a state is.
+      Diversity Index is generally high where most communities have good representation. If there is one clear majority
+      and negligible minority population, diversity index is low.
+      The lighter the shade, the lower the diversity index and vice versa.
+    </p>
+    <p>
+      If you click on a particular state, you will zoom into the state and get a bar graph displaying the population
+      difference of different communities.
+      When you click again, you will zoom out of the bar graph.
+      You can hold and move the graph and zoom in or zoom out on the graph view port.
+      I am compiling counties data to calculate the shade of the state in the choropleth.For extra credit,
+      while hovering over the states, you would be able to recognize their diversity Index along with the State Name
+      on the existing Choropleth representation.
+
+
+    </p>
+  </div>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+  <script src="http://d3js.org/queue.v1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+  <script src="mainScript.js"></script>
